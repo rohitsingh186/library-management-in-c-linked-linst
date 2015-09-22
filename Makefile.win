@@ -1,0 +1,86 @@
+# Project: Project1_DSPD2
+# Makefile created by Dev-C++ 5.1.1.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = make_node.o main.o insert.o delete.o search.o print.o isEmpty.o getNumRecords.o freeof_employee.o freeof_empname.o remove_space_make_uppercase.o getMaxNumHrs.o create_node.o list_unique.o list_union.o create_duplicate.o create_checklist.o list_intersection.o list_difference.o list_symmetric_difference.o $(RES)
+LINKOBJ  = make_node.o main.o insert.o delete.o search.o print.o isEmpty.o getNumRecords.o freeof_employee.o freeof_empname.o remove_space_make_uppercase.o getMaxNumHrs.o create_node.o list_unique.o list_union.o create_duplicate.o create_checklist.o list_intersection.o list_difference.o list_symmetric_difference.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc  
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+BIN      = Project1_DSPD2.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Project1_DSPD2.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Project1_DSPD2.exe" $(LIBS)
+
+make_node.o: make_node.c
+	$(CC) -c make_node.c -o make_node.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+insert.o: insert.c
+	$(CC) -c insert.c -o insert.o $(CFLAGS)
+
+delete.o: delete.c
+	$(CC) -c delete.c -o delete.o $(CFLAGS)
+
+search.o: search.c
+	$(CC) -c search.c -o search.o $(CFLAGS)
+
+print.o: print.c
+	$(CC) -c print.c -o print.o $(CFLAGS)
+
+isEmpty.o: isEmpty.c
+	$(CC) -c isEmpty.c -o isEmpty.o $(CFLAGS)
+
+getNumRecords.o: getNumRecords.c
+	$(CC) -c getNumRecords.c -o getNumRecords.o $(CFLAGS)
+
+freeof_employee.o: freeof_employee.c
+	$(CC) -c freeof_employee.c -o freeof_employee.o $(CFLAGS)
+
+freeof_empname.o: freeof_empname.c
+	$(CC) -c freeof_empname.c -o freeof_empname.o $(CFLAGS)
+
+remove_space_make_uppercase.o: remove_space_make_uppercase.c
+	$(CC) -c remove_space_make_uppercase.c -o remove_space_make_uppercase.o $(CFLAGS)
+
+getMaxNumHrs.o: getMaxNumHrs.c
+	$(CC) -c getMaxNumHrs.c -o getMaxNumHrs.o $(CFLAGS)
+
+create_node.o: create_node.c
+	$(CC) -c create_node.c -o create_node.o $(CFLAGS)
+
+list_unique.o: list_unique.c
+	$(CC) -c list_unique.c -o list_unique.o $(CFLAGS)
+
+list_union.o: list_union.c
+	$(CC) -c list_union.c -o list_union.o $(CFLAGS)
+
+create_duplicate.o: create_duplicate.c
+	$(CC) -c create_duplicate.c -o create_duplicate.o $(CFLAGS)
+
+create_checklist.o: create_checklist.c
+	$(CC) -c create_checklist.c -o create_checklist.o $(CFLAGS)
+
+list_intersection.o: list_intersection.c
+	$(CC) -c list_intersection.c -o list_intersection.o $(CFLAGS)
+
+list_difference.o: list_difference.c
+	$(CC) -c list_difference.c -o list_difference.o $(CFLAGS)
+
+list_symmetric_difference.o: list_symmetric_difference.c
+	$(CC) -c list_symmetric_difference.c -o list_symmetric_difference.o $(CFLAGS)
